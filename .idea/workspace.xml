@@ -140,9 +140,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-23" />
-    <option name="width" value="1182" />
-    <option name="height" value="1012" />
+    <option name="x" value="-24" />
+    <option name="width" value="1183" />
+    <option name="height" value="1013" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -179,6 +179,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
     <property name="node.js.detected.package.eslint" value="true" />
