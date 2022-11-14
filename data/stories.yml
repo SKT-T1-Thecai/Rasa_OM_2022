@@ -1,0 +1,14 @@
+version: "3.1"
+
+stories:
+
+- story: search weather 1
+  steps:
+    - intent: search_weather
+    - action: action_search_weather
+
+- story: high cpu usage
+  steps:
+    - intent: inform_warning/cpu_high_usage
+    - action: action_cpu_high_usage
+

@@ -1,0 +1,55 @@
+version: '3.1'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- search_basic_condition
+- inform_warning/cpu_high_usage
+- inform_warning/memory_high_usage
+- inform_warning/disk_high_usage
+- inform_warning/other_warning
+- work_order/issue
+- work_order/security
+- work_order/operation
+- work_order/network
+- search_architecture/bussiness_system
+- search_architecture/virtual_machine_server
+- search_architecture/database
+- search_architecture/middleware
+- search_architecture/host
+- search_architecture/device_interconnection
+- search_architecture/network_device
+- search_notice
+- other_question
+- search_weather
+responses:
+  utter_first:
+  - text: 您好，我是您的医疗助手Friende，我是个机器人，请问有什么可以帮您？
+  utter_greet:
+  - text: 您好～
+  - text: 您好呀～
+  utter_goodbye:
+  - text: 再见，祝您身体健康～
+  - text: 拜拜，希望我有帮到您～
+  utter_donknow:
+  - text: 啊噢，我没有理解您说的话，我的理解力还需要更多的提升>_<。
+
+
+entities:
+- city
+
+slots:
+  city:
+    type: text
+    influence_conversation: false
+    mappings:
+     - type: from_entity
+       entity: city
+
+actions:
+- action_search_weather
+- action_cpu_high_usage
+
+
+
+

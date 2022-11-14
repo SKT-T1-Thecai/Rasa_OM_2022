@@ -1,0 +1,31 @@
+version: "3.1"
+
+nlu:
+- intent: search_weather
+  examples: |
+    - [北京]{"entity":"city"}天气怎么样
+    - [上海]{"entity":"city"}天气怎么样
+    - [天津]{"entity":"city"}天气怎么样
+    - [南京]{"entity":"city"}天气怎么样
+    - [开封]{"entity":"city"}天气怎么样
+    - [西安]{"entity":"city"}天气怎么样
+    - [广州]{"entity":"city"}天气怎么样
+    - [深圳]{"entity":"city"}天气怎么样
+    - [濮阳]{"entity":"city"}最近天气怎么样
+    - [洛阳]{"entity":"city"}最近天气还好吗
+
+
+
+- intent: inform_warning/cpu_high_usage
+  examples: |
+    - 为什么cpu占用这么高
+    - cpu的使用率太高了
+    - cpu使用率在90%以上
+    - 为什么提示我cpu繁忙？
+    - 为什么电脑提示我CPU使用率高
+    - 为什么处理器占用率高
+    - Intel CPU占用率高，电脑好卡
+    - 什么地方出故障了，处理器占用这么高
+    - 为什么CPU不响应我的指令
+    - 我的电脑cpu占用率太高了
+
