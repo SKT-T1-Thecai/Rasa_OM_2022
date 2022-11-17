@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61817ba3-676e-43ef-bdb8-a0a0e9ddb930" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/story_graph.dot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_11_16_16_11___Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_11_16_16_11___Default_Changelist_.xml" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.rasa/cache/cache.db" beforeDir="false" afterPath="$PROJECT_DIR$/.rasa/cache/cache.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_import/import2neo4j.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_import/import2neo4j.py" afterDir="false" />
@@ -160,7 +165,11 @@
       <workItem from="1668150602805" duration="8525000" />
       <workItem from="1668615163951" duration="306000" />
       <workItem from="1668690562706" duration="951000" />
+<<<<<<< Updated upstream
       <workItem from="1668691576220" duration="1586000" />
+=======
+      <workItem from="1668691576220" duration="1339000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
