@@ -3,7 +3,8 @@
   <component name="dataSourceStorageLocal">
     <data-source name="events" uuid="9a94f1e9-ef6a-458d-beeb-714962621efe">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
-      <auth-required>false</auth-required>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
     </data-source>
   </component>
 </project>
