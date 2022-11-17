@@ -43,3 +43,26 @@ class ActionCPUHighUsage(Action):
         return []
 
 
+class ActionGetAlarmInSystem(Action):
+    def name(self) -> Text:
+        return "action_get_alarm_in_system"
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="知道平台报警了")
+        return []
+
+class ActionGetPeopleInSystem(Action):
+    def name(self) -> Text:
+        return "action_get_people_in_system"
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        system = tracker.get_slot("system")
+        dispatcher.utter_message(text="你问的是"+system+"的平台吗")
+        return []

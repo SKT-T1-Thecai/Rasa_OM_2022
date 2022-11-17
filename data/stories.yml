@@ -1,14 +1,30 @@
 version: "3.1"
 
 stories:
-
-- story: search weather 1
+- story: get_alarm_in_system_1
   steps:
-    - intent: search_weather
-    - action: action_search_weather
+    - intent: greet
+    - action: utter_greet
+    - intent: get_alarm_in_system
+    - action: action_get_alarm_in_system
+    - intent: bye
+    - action: utter_goodbye
 
-- story: high cpu usage
+- story: get_alarm_in_system_2
   steps:
-    - intent: inform_warning/cpu_high_usage
-    - action: action_cpu_high_usage
+    - intent: get_alarm_in_system
+    - action: action_get_alarm_in_system
 
+- story: get_people_in_system_1
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_people_in_system
+    - action: action_get_people_in_system
+    - intent: bye
+    - action: utter_goodbye
+
+- story: get_people_in_system_2
+  steps:
+    - intent: get_people_in_system
+    - action: action_get_people_in_system

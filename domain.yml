@@ -2,6 +2,11 @@ version: '3.1'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+actions:
+- action_search_weather
+- action_cpu_high_usage
+- action_get_alarm_in_system
+- action_get_people_in_system
 intents:
 - search_basic_condition
 - inform_warning/cpu_high_usage
@@ -22,6 +27,13 @@ intents:
 - search_notice
 - other_question
 - search_weather
+- greet
+- bye
+- get_alarm_in_system
+- get_people_in_system
+- first:
+    triggers: action_first
+
 responses:
   utter_first:
   - text: 您好，我是您的医疗助手Friende，我是个机器人，请问有什么可以帮您？
@@ -37,6 +49,8 @@ responses:
 
 entities:
 - city
+- system
+- people
 
 slots:
   city:
@@ -45,10 +59,18 @@ slots:
     mappings:
      - type: from_entity
        entity: city
-
-actions:
-- action_search_weather
-- action_cpu_high_usage
+  system:
+    type: text
+    influence_conversation: false
+    mappings:
+     - type: from_entity
+       entity: system
+  people:
+   type: text
+   influence_conversation: false
+   mappings:
+     - type: from_entity
+       entity: people
 
 
 
