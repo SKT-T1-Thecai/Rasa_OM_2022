@@ -315,9 +315,14 @@ class GraphMaker(object):
                     self.neo4j_link.create(node)
 om_graph = GraphMaker()
 data = process(json_folder,file_list)
+# 创建图数据库
 om_graph.create_nodes(data)
 om_graph.create_device_nodes(data)
 om_graph.create_rels(data)
+# business_data = om_graph.get_data(data,"business_system")
+# for item in business_data:
+#     print(item["name"])
+
 
 
 

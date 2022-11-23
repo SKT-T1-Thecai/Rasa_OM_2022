@@ -28,3 +28,17 @@ stories:
   steps:
     - intent: get_people_in_system
     - action: action_get_people_in_system
+
+- story: get_virtual_machines_in_system_1
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_virtual_machines_in_system
+    - action: action_get_virtual_machines_in_system
+    - intent: bye
+    - action: utter_goodbye
+
+- story: get_virtual_machines_in_system_2
+  steps:
+    - intent: get_virtual_machines_in_system
+    - action: action_get_virtual_machines_in_system

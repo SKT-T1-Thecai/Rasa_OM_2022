@@ -7,6 +7,7 @@ actions:
 - action_cpu_high_usage
 - action_get_alarm_in_system
 - action_get_people_in_system
+- action_get_virtual_machines_in_system
 intents:
 - search_basic_condition
 - inform_warning/cpu_high_usage
@@ -31,8 +32,7 @@ intents:
 - bye
 - get_alarm_in_system
 - get_people_in_system
-- first:
-    triggers: action_first
+- get_virtual_machines_in_system
 
 responses:
   utter_first:
@@ -66,9 +66,9 @@ slots:
      - type: from_entity
        entity: system
   people:
-   type: text
-   influence_conversation: false
-   mappings:
+    type: text
+    influence_conversation: false
+    mappings:
      - type: from_entity
        entity: people
 
