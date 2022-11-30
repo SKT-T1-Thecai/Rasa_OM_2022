@@ -30,9 +30,17 @@ intents:
 - search_weather
 - greet
 - bye
+- ask_who
+- ask_use
+- thanks
+- deny
+- affirm
+- chitchat
+- stop
 - get_alarm_in_system
 - get_people_in_system
 - get_virtual_machines_in_system
+- get_virtual_machines
 
 responses:
   utter_first:
@@ -61,7 +69,7 @@ slots:
        entity: city
   system:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
      - type: from_entity
        entity: system
@@ -71,7 +79,12 @@ slots:
     mappings:
      - type: from_entity
        entity: people
-
+forms:
+  system_form:
+    ignored_intents:
+        - chitchat
+    required_slots:
+        - system
 
 
 

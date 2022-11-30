@@ -6,18 +6,26 @@ pipeline:
   model: data/total_word_feature_extractor_zh.dat
 - name: JiebaTokenizer
   dictionary_path: data/jieba_userdict
-- name: MitieEntityExtractor
+#- name: MitieEntityExtractor
 - name: EntitySynonymMapper
+- name: RegexEntityExtractor
 - name: RegexFeaturizer
+  use_word_boundaries: False
 - name: MitieFeaturizer
+- name: LexicalSyntacticFeaturizer
+#- name: LanguageModelFeaturizer
+#  model_name: bert
+#  model_weights: bert-base-chinese
 #- name: SklearnIntentClassifier
 - name: DIETClassifier
   epochs: 50
+  constrain_similarities: true
 
 
 policies:
 - name: "TEDPolicy"
   epochs: 50
+  constrain_similarities: True
 - name: "MemoizationPolicy"
   max_history: 5
 - name: "RulePolicy"

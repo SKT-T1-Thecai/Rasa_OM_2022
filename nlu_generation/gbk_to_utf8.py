@@ -1,6 +1,6 @@
 import os
 
-file = 'D:\PycharmProjects\Rasa_OM_2022\\nlu_generation\output\\train\\'
+file = './output/train/'
 for f_src in os.listdir(file):
     #print(f_src)
     #print(f_src.split('.')[0:-1].c)

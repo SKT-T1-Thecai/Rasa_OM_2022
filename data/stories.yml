@@ -1,44 +1,40 @@
 version: "3.1"
 
 stories:
-- story: get_alarm_in_system_1
+- story: greet
   steps:
     - intent: greet
     - action: utter_greet
-    - intent: get_alarm_in_system
-    - action: action_get_alarm_in_system
+- story: bye
+  steps:
     - intent: bye
     - action: utter_goodbye
-
-- story: get_alarm_in_system_2
+- story: get_alarm_in_system
   steps:
     - intent: get_alarm_in_system
     - action: action_get_alarm_in_system
-
-- story: get_people_in_system_1
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: get_people_in_system
-    - action: action_get_people_in_system
-    - intent: bye
-    - action: utter_goodbye
-
-- story: get_people_in_system_2
+- story: get_people_in_system
   steps:
     - intent: get_people_in_system
     - action: action_get_people_in_system
-
-- story: get_virtual_machines_in_system_1
+- story: get_virtual_machines_in_system
   steps:
-    - intent: greet
-    - action: utter_greet
     - intent: get_virtual_machines_in_system
     - action: action_get_virtual_machines_in_system
-    - intent: bye
-    - action: utter_goodbye
-
-- story: get_virtual_machines_in_system_2
+- story: get_virtual_machines_in_system
   steps:
     - intent: get_virtual_machines_in_system
+    - action: action_get_virtual_machines_in_system
+- story: happy path:get virtual machines after get people in system
+  steps:
+    - intent: get_people_in_system
+    - action: action_get_people_in_system
+    - intent: get_virtual_machines
+    - action: action_get_virtual_machines_in_system
+- story: happy path:get virtual machines then ask for system
+  steps:
+    - intent: get_virtual_machines
+    - action: system_form                # Activate the form
+    - active_loop: system_form           # This form is currently active
+    - active_loop: null
     - action: action_get_virtual_machines_in_system

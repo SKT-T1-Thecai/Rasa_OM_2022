@@ -91,7 +91,7 @@ class ActionGetVirtualMachinesInSystem(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         business_system = tracker.get_slot("system")
-        if business_system == None:
+        if business_system is None:
             dispatcher.utter_message("请您先输入业务系统名称。")
             return []
         try:
